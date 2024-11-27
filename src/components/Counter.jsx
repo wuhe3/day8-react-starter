@@ -1,15 +1,15 @@
 import {useState} from "react";
 import "./Counter.css";
 
-const Counter = () => {
+const Counter = ({id, onValueChange}) => {
     const [counter, setCounter] = useState(0);
 
     const increase = () => {
-        setCounter(counter + 1)
+        setCounter(counter + 1);
     }
 
     const decrease = () => {
-        setCounter(counter - 1)
+        setCounter(counter - 1);
     }
 
     return (
@@ -19,15 +19,6 @@ const Counter = () => {
             <button onClick={decrease}>-</button>
         </div>
     )
-
 }
 
 export default Counter;
-
-
-
-
-
-
-
-
