@@ -1,7 +1,7 @@
 import {useState} from "react";
 
-const CounterGroupGenerator = () => {
-    const [size, setSize] = useState(0);
+const CounterGroupGenerator = (props) => {
+    const [size, setSize] = useState(props.size);
 
     const handleChange = (event) => {
         // event is a wrapper, target is the input element, value is the value of the target
@@ -9,12 +9,12 @@ const CounterGroupGenerator = () => {
     };
 
     const handleReset = () => {
-        setSize(0);
+        props.setSize(size);
     }
 
     return (
         <div>
-            <span>Size: {size}</span>
+            <span>Size: {props.size}</span>
             <input min={0} max={20} type="number" value={size} onChange={handleChange}/>
             <button onClick={handleReset}>reset</button>
         </div>
@@ -22,8 +22,6 @@ const CounterGroupGenerator = () => {
 
 }
 export default CounterGroupGenerator;
-
-
 
 
 
