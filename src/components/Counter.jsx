@@ -1,7 +1,8 @@
 import {useState} from "react";
+import "./Counter.css";
 
 const Counter = () => {
-    const [counter, setCounter] = useState(10);
+    const [counter, setCounter] = useState(0);
 
     const increase = () => {
         setCounter(counter + 1)
@@ -11,22 +12,11 @@ const Counter = () => {
         setCounter(counter - 1)
     }
 
-    const reset = () => {
-        setCounter(0);
-    }
-
     return (
-        <div>
-            <div>
-                <button onClick={increase}>+</button>
-            </div>
-            <div>
-                <button onClick={decrease}>-</button>
-            </div>
-            <div>
-                <button onClick={reset}>reset</button>
-            </div>
-            <div>{counter}</div>
+        <div className={"counter-wrapper"}>
+            <button onClick={increase}>+</button>
+            <span>{counter}</span>
+            <button onClick={decrease}>-</button>
         </div>
     )
 
