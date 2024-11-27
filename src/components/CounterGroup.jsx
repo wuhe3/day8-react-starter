@@ -1,17 +1,16 @@
 import Counter from "./Counter";
+import {useState} from "react";
 
-
-const CounterGroup = (props) => {
-    const size = props.size;
+const CounterGroup = ({size, setSum}) => {
+    const [counterValues, setCounterValues] = useState({});
 
     return (
         <div className={"counter-group-wrapper"}>
             {Array.apply(null, { length: size }).map((e, i) => (
-                <Counter id={`i${Math.random()}`} key={`i${Math.random()}`} />
+                <Counter id={`counter${i}`} key={`counter${i}`} />
             ))}
         </div>
     )
 }
-
 
 export default CounterGroup;
