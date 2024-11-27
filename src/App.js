@@ -1,10 +1,11 @@
 import './App.css';
 import ProductCategory from "./components/ProductCategory";
+import Counter from "./components/Counter";
 
 function App() {
     return (
         <div className="App">
-            <ProductCategory />
+            <Counter></Counter>
         </div>
     );
 }
