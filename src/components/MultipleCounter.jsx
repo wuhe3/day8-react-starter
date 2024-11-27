@@ -8,7 +8,11 @@ const MultipleCounter = () => {
 
     return (
         <div>
-            <CounterGroupGenerator size={size} setSize={setSize}></CounterGroupGenerator>
+            <CounterGroupGenerator
+                size={size}
+                setSize={setSize}
+                setSum={setSum}
+            ></CounterGroupGenerator>
             <div>Sum: {sum}</div>
             <CounterGroup size={size} setSum={setSum}/>
         </div>
