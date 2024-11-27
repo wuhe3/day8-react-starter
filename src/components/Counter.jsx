@@ -1,5 +1,4 @@
 import {useState, useEffect} from "react";
-import "./Counter.css";
 
 const Counter = ({id, onValueChange}) => {
     const [counter, setCounter] = useState(0);
