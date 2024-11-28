@@ -14,7 +14,7 @@ const CounterGroup = ({size, setSum}) => {
     useEffect(() => {
         const sum = Object.values(counterValues).reduce((a, b) => a + b, 0);
         setSum(sum);
-    }, [counterValues, setSum]);
+    }, [counterValues]);
 
     return (
         <div className={"counter-group-wrapper"}>
